@@ -1,7 +1,6 @@
 * {
   margin: 0;
   /* Я очень извиняюсь, но у меня похоже Гугл Хром сам ставит всем элементам margin в 16px, и я не знаю как их убрать другим путем? */
-  border: 1px solid red;
 }
 
 .page {
@@ -264,15 +263,23 @@
 
 .footer {
   background-color: #1f1f1f;
-  min-height: 350px;
+  /* min-height: 350px; */
+  padding: 60px 0 40px;
 }
 
 .footer__columns {
   max-width: 90%;
-  margin: 60px auto 40px;
+  margin: 0 auto;
   color: white;
   display: flex;
   justify-content: space-between;
+}
+
+/* Здравствуйте, извините, я не знаю как по другому сделать чтобы был отступ, 
+подскажите пожалуйста, в чате так никто и не помог...
+Я понимаю, что это костыль, но как его исправить? */
+.footer__column {
+  min-height: 250px;
 }
 
 .footer__column_content_copyright {
