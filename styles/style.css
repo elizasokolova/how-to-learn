@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  /* Я очень извиняюсь, но у меня похоже Гугл Хром сам ставит всем элементам margin в 16px, и я не знаю как их убрать другим путем? */
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -61,15 +56,16 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+  transition: 0.3s;
 }
 
 .header__link:hover {
   opacity: 0.5;
-  transition: 0.3s;
 }
 
 .logo {
   width: 183px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -81,11 +77,14 @@
   height: 32px;
 }
 
+.logo_place_footer {
+  background-image: url(/images/logo_place_footer.svg);
+  height: 35px;
+}
+
 .header__main_illustration {
   width: 765px;
   height: 608px;
-  background-image: url(/images/header-image.png);
-  background-size: cover;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -103,11 +102,13 @@
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
+  width: 100%;
   color: #2f80ed;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 0;
 }
 
 .two-columns__main-text {
@@ -126,6 +127,7 @@
 
 .two-columns__paragraph {
   margin-top: 30px;
+  margin-bottom: 0;
   font-weight: normal;
   line-height: 34px;
   font-size: 24px;
@@ -136,16 +138,17 @@
 }
 
 .section-title {
-  min-width: 60%;
+  max-width: 60%;
   line-height: 1.15;
   font-size: 60px;
+  margin: 0 auto;
   font-weight: bold;
   text-align: center;
 }
 
 .section-subtitle {
-  min-width: 60%;
-  margin: 20px 0 0;
+  max-width: 60%;
+  margin: 20px auto 0;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
@@ -154,19 +157,23 @@
 
 .table {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  list-style-type: none;
+  padding: 0;
 }
 
 .table__cell {
   width: 250px;
-  margin-top: 60px;
+  margin: 60px 0 0 0;
+  padding: 0;
 }
 
 .table__heading {
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
@@ -176,11 +183,10 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-top: 20px;
+  margin: 20px 0 0 0;
 }
 
 .feynman {
-  width: 100%;
   min-height: 890px;
   background-image: url(/images/feynman.png);
   background-repeat: no-repeat;
@@ -190,6 +196,7 @@
 }
 
 .feynman__title {
+  padding-top: 100px;
   max-width: 648px;
   line-height: 1.15;
   font-size: 120px;
@@ -200,7 +207,7 @@
 
 .feynman__subtitle {
   text-align: center;
-  margin-top: 70px;
+  margin: 70px 0 0 0;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -215,11 +222,11 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  transition: 0.3s;
 }
 
 .feynman__link:hover {
   opacity: 0.5;
-  transition: 0.3s;
 }
 
 .kaufman {
@@ -256,30 +263,25 @@
   position: absolute;
   top: 0;
   right: -210px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .footer {
   background-color: #1f1f1f;
-  /* min-height: 350px; */
+  min-height: 350px;
+  display: flex;
+  box-sizing: border-box;
   padding: 60px 0 40px;
 }
 
 .footer__columns {
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
   color: white;
   display: flex;
   justify-content: space-between;
-}
-
-/* Здравствуйте, извините, я не знаю как по другому сделать чтобы был отступ, 
-подскажите пожалуйста, в чате так никто и не помог...
-Я понимаю, что это костыль, но как его исправить? */
-.footer__column {
-  min-height: 250px;
 }
 
 .footer__column_content_copyright {
@@ -298,21 +300,19 @@
   bottom: 0;
 }
 
-.logo_place_footer {
-  background-image: url(/images/logo_place_footer.svg);
-  height: 35px;
-}
-
 .footer__column-heading {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
+  margin: 0;
 }
 
 .footer__column-links {
   margin: 20px 0 16px;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer__column-link {
@@ -321,11 +321,13 @@
   font-weight: normal;
   text-decoration: none;
   color: white;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
 }
 
 .footer__column-link:hover {
   opacity: 0.5;
-  transition: 0.3s;
 }
 
 .footer__social-icon {
