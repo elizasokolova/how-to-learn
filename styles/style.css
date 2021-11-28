@@ -17,10 +17,9 @@
   display: flex;
   align-items: center;
   position: relative;
-  /* выше установили ограничения для секции */
+  overflow: hidden; /* Обрезает выходящее за пределы */
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -88,6 +87,7 @@
   bottom: 0;
   right: 0;
   position: absolute;
+  object-fit: cover;
 }
 
 .description {
@@ -248,7 +248,6 @@
   z-index: 1;
 }
 
-/* элемент с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   margin-top: 80px;
@@ -284,10 +283,13 @@
   justify-content: space-between;
 }
 
-.footer__column_content_copyright {
-  flex-basis: 711px;
+.footer__column {
   display: flex;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
   justify-content: space-between;
 }
 
